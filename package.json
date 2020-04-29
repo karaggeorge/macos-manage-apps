@@ -1,0 +1,49 @@
+{
+  "name": "macos-launch-application",
+  "version": "1.0.0",
+  "description": "Launch or kill applications on macOS.",
+  "repository": "https://github.com/karaggeorge/macos-launch-application",
+  "author": {
+    "name": "George Karagkiaouris",
+    "email": "gkaragkiaouris2@gmail.com",
+    "url": "https://gkaragkiaouris.tech"
+  },
+  "license": "MIT",
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "launch-app",
+    "kill-app"
+  ],
+  "scripts": {
+    "test": "xo && tsd",
+    "build": "swift build --configuration=release && mv ./.build/release/launch-app ./.build/release/kill-app .",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "macos",
+    "swift",
+    "app",
+    "application",
+    "launch",
+    "start",
+    "stop",
+    "kill",
+    "bundle",
+    "identifier"
+  ],
+  "engines": {
+    "node": ">=8"
+  },
+  "dependencies": {
+    "electron-util": "^0.13.1",
+    "execa": "^4.0.0"
+  },
+  "devDependencies": {
+    "tsd": "^0.11.0",
+    "xo": "^0.25.3"
+  },
+  "xo": {
+    "space": 2
+  }
+}
