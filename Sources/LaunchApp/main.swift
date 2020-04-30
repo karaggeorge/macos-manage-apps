@@ -14,7 +14,7 @@ guard let bundleId = Array(CommandLine.arguments.dropFirst(1)).first else {
 let url = NSWorkspace.shared.urlForApplication(withBundleIdentifier: bundleId)
 
 guard let appUrl = url else {
-  print("No app found for given bundle identifier")
+  print("No app found for the given bundle identifier")
   exit(1)
 }
 
