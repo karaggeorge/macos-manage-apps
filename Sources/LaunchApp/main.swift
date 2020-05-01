@@ -22,7 +22,7 @@ if #available(macOS 10.15, *) {
   let configuration = NSWorkspace.OpenConfiguration()
   NSWorkspace.shared.openApplication(at: appUrl, configuration: configuration) { _, error in
     guard error == nil else {
-      print(error.localizedDescription)
+      print(error?.localizedDescription ?? "Something went wrong")
       exit(1)
     }
   }
