@@ -28,3 +28,18 @@ await terminateApp('com.sindresorhus.Dato');
 ```
 */
 export const terminateApp: (bundleId: string) => Promise<void>
+
+/**
+Check whether an app with the given bundle identifier is running.
+
+@param bundleId - The bundle identifier of the app.
+@returns A promise that resolves with true if the app is running and false otherwise.
+
+@example
+```
+import {isAppRunning} from 'macos-manage-apps';
+
+await isAppRunning('com.sindresorhus.Dato'); // true
+```
+*/
+export const isAppRunning: (bundleId: string) => Promise<boolean>

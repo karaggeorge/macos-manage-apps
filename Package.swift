@@ -18,10 +18,17 @@ let package = Package(
       targets: [
         "TerminateApp"
       ]
+    ),
+    .executable(
+      name: "check-app",
+      targets: [
+        "CheckApp"
+      ]
     )
   ],
   targets: [
     .target(name: "LaunchApp"),
-    .target(name: "TerminateApp")
+    .target(name: "TerminateApp"),
+    .target(name: "CheckApp")
   ]
 )

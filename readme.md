@@ -34,7 +34,15 @@ The bundle identifier of the app.
 
 ### `terminateApp(bundleId: string): Promise<true>`
 
-Tries to terminate the app with the given bundle identifier. It will resolve it succeeds, and reject with an error otherwise.
+Tries to terminate the app with the given bundle identifier. It will resolve if it succeeds, and reject with an error otherwise.
+
+#### `bundleId`
+
+The bundle identifier of the app.
+
+### `isAppRunning(bundleId: string): Promise<true>`
+
+Check whether the app with the given bundle identifier is running. It will resolve with true if it's running and false otherwise.
 
 #### `bundleId`
 

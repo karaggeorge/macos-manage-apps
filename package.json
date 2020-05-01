@@ -13,11 +13,12 @@
     "index.js",
     "index.d.ts",
     "launch-app",
-    "terminate-app"
+    "terminate-app",
+    "check-app"
   ],
   "scripts": {
     "test": "xo && tsd",
-    "build": "swift build --configuration=release && mv ./.build/release/launch-app ./.build/release/terminate-app .",
+    "build": "swift build --configuration=release && mv ./.build/release/launch-app ./.build/release/terminate-app ./.build/release/check-app .",
     "prepublishOnly": "npm run build"
   },
   "keywords": [

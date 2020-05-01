@@ -4,6 +4,7 @@
 
 terminate-app
 launch-app
+check-app
 .build
 
 ### Node ###
