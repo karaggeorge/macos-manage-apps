@@ -3,21 +3,19 @@ const execa = require('execa');
 const electronUtil = require('electron-util/node');
 
 const launchBinary = path.join(electronUtil.fixPathForAsarUnpack(__dirname), 'launch-app');
-const killBinary = path.join(electronUtil.fixPathForAsarUnpack(__dirname), 'kill-app');
+const terminateBinary = path.join(electronUtil.fixPathForAsarUnpack(__dirname), 'terminate-app');
 
 module.exports = {
   launchApp: async bundleId => {
     try {
       await execa(launchBinary, [bundleId]);
-      return true;
     } catch (error) {
       throw new Error(error.stdout);
     }
   },
-  killApp: async bundleId => {
+  terminateApp: async bundleId => {
     try {
-      await execa(killBinary, [bundleId]);
-      return true;
+      await execa(terminateBinary, [bundleId]);
     } catch (error) {
       throw new Error(error.stdout);
     }

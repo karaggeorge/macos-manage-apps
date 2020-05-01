@@ -2,7 +2,7 @@
 import PackageDescription
 
 let package = Package(
-  name: "macos-launch-application",
+  name: "macos-manage-apps",
   platforms: [
     .macOS(.v10_12)
   ],
@@ -14,14 +14,14 @@ let package = Package(
       ]
     ),
     .executable(
-      name: "kill-app",
+      name: "terminate-app",
       targets: [
-        "KillApp"
+        "TerminateApp"
       ]
     )
   ],
   targets: [
     .target(name: "LaunchApp"),
-    .target(name: "KillApp")
+    .target(name: "TerminateApp")
   ]
 )

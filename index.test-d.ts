@@ -1,8 +1,8 @@
 import {expectType, expectError} from 'tsd';
-import {launchApp, killApp} from '.';
+import {launchApp, terminateApp} from '.';
 
-expectType<Promise<true>>(launchApp('bundleId'));
-expectType<Promise<true>>(killApp('bundleId'));
+expectType<Promise<void>>(launchApp('bundleId'));
+expectType<Promise<void>>(terminateApp('bundleId'));
 
 expectError(launchApp());
-expectError(killApp());
+expectError(terminateApp());

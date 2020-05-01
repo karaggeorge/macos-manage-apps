@@ -1,8 +1,8 @@
 {
-  "name": "macos-launch-application",
+  "name": "macos-manage-apps",
   "version": "1.0.0",
   "description": "Launch and terminate apps on macOS",
-  "repository": "https://github.com/karaggeorge/macos-launch-application",
+  "repository": "https://github.com/karaggeorge/macos-manage-apps",
   "author": {
     "name": "George Karagkiaouris",
     "email": "gkaragkiaouris2@gmail.com",
@@ -13,11 +13,11 @@
     "index.js",
     "index.d.ts",
     "launch-app",
-    "kill-app"
+    "terminate-app"
   ],
   "scripts": {
     "test": "xo && tsd",
-    "build": "swift build --configuration=release && mv ./.build/release/launch-app ./.build/release/kill-app .",
+    "build": "swift build --configuration=release && mv ./.build/release/launch-app ./.build/release/terminate-app .",
     "prepublishOnly": "npm run build"
   },
   "keywords": [
@@ -29,6 +29,7 @@
     "start",
     "stop",
     "kill",
+    "terminate",
     "bundle",
     "identifier"
   ],
