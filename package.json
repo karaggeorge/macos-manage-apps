@@ -1,7 +1,7 @@
 {
   "name": "macos-launch-application",
   "version": "1.0.0",
-  "description": "Launch or kill applications on macOS.",
+  "description": "Launch and terminate apps on macOS",
   "repository": "https://github.com/karaggeorge/macos-launch-application",
   "author": {
     "name": "George Karagkiaouris",

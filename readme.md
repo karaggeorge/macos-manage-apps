@@ -1,9 +1,8 @@
 # macos-launch-application
 
-> Launch or kill applications on macOS.
+> Launch and terminate apps on macOS
 
-macOS 10.14.3 or earlier needs to download the Swift runtime support libraries. [More Info Here](https://developer.apple.com/documentation/xcode_release_notes/xcode_10_2_release_notes/swift_5_release_notes_for_xcode_10_2).
-
+If you're on macOS 10.14.3 or earlier, you need to download the [Swift runtime support libraries](https://support.apple.com/kb/DL1998).
 
 ## Install
 
@@ -16,9 +15,11 @@ $ npm install macos-launch-application
 ```js
 const {launchApp, killApp} = require('macos-launch-application');
 
-launchApp('com.sindresorhus.Dato');
+(async () => {
+  await launchApp('com.sindresorhus.Dato');
 
-killApp('com.sindresorhus.Dato');
+  await killApp('com.sindresorhus.Dato');
+})();
 ```
 
 ## API
@@ -29,7 +30,7 @@ Tries to launch the app with the given bundle identifier. It will resolve to tru
 
 #### `bundleId`
 
-The bundle identifier of the app
+The bundle identifier of the app.
 
 ### `killApp(bundleId: string): Promise<true>`
 
@@ -37,7 +38,7 @@ Tries to kill the app with the given bundle identifier. It will resolve to true 
 
 #### `bundleId`
 
-The bundle identifier of the app
+The bundle identifier of the app.
 
 ## Related
 
