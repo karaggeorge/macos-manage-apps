@@ -1,6 +1,6 @@
 {
   "name": "macos-manage-apps",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Launch and terminate apps on macOS",
   "repository": "https://github.com/karaggeorge/macos-manage-apps",
   "author": {
