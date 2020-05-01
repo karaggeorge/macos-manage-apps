@@ -18,14 +18,4 @@ guard let appUrl = url else {
   exit(1)
 }
 
-if #available(macOS 10.15, *) {
-  let configuration = NSWorkspace.OpenConfiguration()
-  NSWorkspace.shared.openApplication(at: appUrl, configuration: configuration) { _, error in
-    if let error = error {
-      print(error.localizedDescription)
-      exit(1)
-    }
-  }
-} else {
-  _ = try? NSWorkspace.shared.launchApplication(at: appUrl, configuration: [:])
-}
+_ = try? NSWorkspace.shared.launchApplication(at: appUrl, configuration: [:])
